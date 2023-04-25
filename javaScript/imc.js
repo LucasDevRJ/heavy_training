@@ -26,6 +26,11 @@ function desenhaGrafico(imc) {
 	pincel.fillText("Menor que 18,5", 5, 50);
 	pincel.fillStyle = "red";
 	pincel.fillRect(0, 0, 100, 30);
+
+	pincel.fillStyle = "black";
+	pincel.fillText("18,5 a 24,9", 120, 50);
+	pincel.fillStyle = "green";
+	pincel.fillRect(100, 0, 100, 30);
 }
 
 var botao = document.getElementById("botao");
