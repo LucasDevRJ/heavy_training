@@ -10,16 +10,35 @@ function calculaImc() {
 	var peso = campoPeso.value;
 	var altura = campoAltura.value;
 
+	var dadosValidos = false;
+
 	idade = parseInt(idade);
 	peso = parseFloat(peso);
 	altura = parseFloat(altura);
+
+	validaDados(nome, idade, peso, altura, dadosValidos);
 
 	var imc = peso / (altura * altura);
 	var imcArredondado = imc.toFixed(2);
 
 	resposta.innerHTML = "Olá " + nome + ", seu IMC é " + imcArredondado + " kg. Pode olhar no gráfico abaixo as classficicações dos IMC's.";
 
-	desenhaGrafico(imc);
+	if (dadosValidos == true) {
+		desenhaGrafico(imc);
+	}
+}
+
+function validaDados(nome, idade, peso, altura, dadosValidos) {
+	var erroNome = document.getElementById("erro-nome");
+	var erroIdade = document.getElementById("erro-idade");
+
+	if (nome.length == 0) {
+		erroNome.innerHTML = "Campo vázio!";
+	} 
+ 
+	if (idade <= 0 || idade >= 100) {
+		erroIdade.innerHTML = "Idade inválida!";
+	}
 }
 
 function desenhaGrafico(imc) {
