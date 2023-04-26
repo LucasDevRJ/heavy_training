@@ -1,0 +1,32 @@
+.banner {
+	height: 300px;
+	background-image: url("../imagens/banner.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.banner-titulo {
+	font-size: 60px;
+	color: #FFFFFF;
+}
+
+.banner-subtitulo {
+	font-size: 20px;
+	color: #FFFFFF;
+	font-style: italic;
+	line-height: 60px;
+}
+
+.subtitulo:before {
+	content: '"';
+}
+
+.subtitulo:after {
+	content: '"';
+}

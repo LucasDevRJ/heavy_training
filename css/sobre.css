@@ -1,0 +1,31 @@
+.sobre {
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 50px;
+}
+
+.sobre-titulo {
+	font-size: 60px;
+}
+
+.sobre-texto {
+	font-size: 25px;
+}
+
+.sobre-imagem {
+	width: 30%;
+}
+
+.servicos {
+	height: 600px;
+	display: flex;
+	align-items: center;
+}
+
+.servicos-lista {
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+}
