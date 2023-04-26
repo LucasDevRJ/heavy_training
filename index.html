@@ -4,30 +4,34 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Heavy Training</title>
+		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
-		<div class="banner">
-			
-		</div>
-		
-		<p>Nome:</p>
-		<input type="text" placeholder="Digite seu nome" id="nome">
+		<main class="caixa">
+			<section class="banner">
+				<h3 class="titulo">Heavy Training</h3>
+				<h4 class="subtitulo">Para quem gosta de treinar pesado!</h4>
+			</section>
 
-		<p>Idade:</p>
-		<input type="text" placeholder="Digite sua idade" id="idade">
+			<p>Nome:</p>
+			<input type="text" placeholder="Digite seu nome" id="nome">
 
-		<p>Peso:</p>
-		<input type="text" placeholder="Digite seu peso" id="peso">
+			<p>Idade:</p>
+			<input type="text" placeholder="Digite sua idade" id="idade">
 
-		<p>Altura:</p>
-		<input type="text" placeholder="Digite sua altura" id="altura"> 
+			<p>Peso:</p>
+			<input type="text" placeholder="Digite seu peso" id="peso">
 
-		<button id="botao">Gerar Relatório</button>
+			<p>Altura:</p>
+			<input type="text" placeholder="Digite sua altura" id="altura"> 
 
-		<h2 id="resposta"></h2>
+			<button id="botao">Gerar Relatório</button>
 
-		<canvas id="grafico" width="600" height="100"></canvas>
+			<h2 id="resposta"></h2>
+
+			<canvas id="grafico" width="600" height="100"></canvas>
+		</main>
 
 		<script src="javaScript/imc.js"></script>
 	</body>
