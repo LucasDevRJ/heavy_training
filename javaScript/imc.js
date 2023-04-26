@@ -21,9 +21,8 @@ function calculaImc() {
 	var imc = peso / (altura * altura);
 	var imcArredondado = imc.toFixed(2);
 
-	resposta.innerHTML = "Olá " + nome + ", seu IMC é " + imcArredondado + " kg. Pode olhar no gráfico abaixo as classficicações dos IMC's.";
-
 	if (dadosValidos == true) {
+		resposta.innerHTML = "Olá " + nome + ", seu IMC é " + imcArredondado + " kg. Pode olhar no gráfico abaixo as classficicações dos IMC's.";
 		desenhaGrafico(imc);
 	}
 }

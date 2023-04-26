@@ -1,0 +1,27 @@
+.servicos{
+	height: 700px;
+	background-image: url("../imagens/servicos-imagem.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.servicos-item {
+	width: 20%;
+	border-width: 2px;
+	border-color: #FFFF00;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #F8F8FF;
+	cursor: pointer;
+}
+
+.servicos-texto {
+	text-align: center;
+	margin-bottom: 20px;
+}
