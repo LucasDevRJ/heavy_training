@@ -11,12 +11,12 @@
 	align-items: center;
 }
 
-.titulo {
+.banner-titulo {
 	font-size: 60px;
 	color: #FFFFFF;
 }
 
-.subtitulo {
+.banner-subtitulo {
 	font-size: 20px;
 	color: #FFFFFF;
 	font-style: italic;
@@ -29,4 +29,24 @@
 
 .subtitulo:after {
 	content: '"';
+}
+
+.sobre {
+	height: 600px;
+	display: flex;
+	background-image: url("../imagens/sobre.jpg");
+	background-repeat: no-repeat;
+	background-position: 90%;
+	background-size: 30%;
+	align-items: center;
+}
+
+.sobre-titulo {
+	font-size: 60px;
+}
+
+.sobre-texto {
+	font-size: 25px;
+	width: 40%;
+	margin: 0 30px;
 }
