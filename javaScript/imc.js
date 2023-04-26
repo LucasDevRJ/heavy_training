@@ -3,6 +3,7 @@ function calculaImc() {
 	var campoIdade = document.getElementById("idade");
 	var campoPeso = document.getElementById("peso");
 	var campoAltura = document.getElementById("altura");
+	var resposta = document.getElementById("resposta");
 
 	var nome = campoNome.value;
 	var idade = campoIdade.value;
@@ -14,6 +15,9 @@ function calculaImc() {
 	altura = parseFloat(altura);
 
 	var imc = peso / (altura * altura);
+	var imcArredondado = imc.toFixed(2);
+
+	resposta.innerHTML = "Seu IMC é " + imcArredondado;
 
 	desenhaGrafico(imc);
 }
