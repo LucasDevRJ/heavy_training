@@ -10,33 +10,55 @@ function calculaImc() {
 	var peso = campoPeso.value;
 	var altura = campoAltura.value;
 
-	var dadosValidos = false;
+	var erroNome = document.getElementById("erro-nome");
+	var erroIdade = document.getElementById("erro-idade");
+	var erroPeso = document.getElementById("erro-peso");
+	var erroAltura = document.getElementById("erro-altura");
+
+	var nomeValido = false;
+	var idadeValida = false;
+	var pesoValido = false;
+	var alturaValida = false;
+
+	if (nome.length == 0) {
+		erroNome.innerHTML = "Campo vázio!";
+	} else {
+		erroNome.innerHTML = "";
+		nomeValido = true;
+	}
+ 
+	if (idade <= 0 || idade >= 100) {
+		erroIdade.innerHTML = "Idade inválida!";
+	} else {
+		erroIdade.innerHTML = "";
+		idadeValida = true;
+	}
+
+	if (peso <= 0 || peso >= 200) {
+		erroPeso.innerHTML = "Peso inválido!";
+	} else {
+		erroPeso.innerHTML = "";
+		pesoValido = true;
+	}
+
+	if (altura <= 0.0 || altura >= 3.00) {
+		erroAltura.innerHTML = "Altura inválida!";
+	} else {
+		erroAltura.innerHTML = "";
+		alturaValida = true;
+	}
 
 	idade = parseInt(idade);
 	peso = parseFloat(peso);
 	altura = parseFloat(altura);
 
-	validaDados(nome, idade, peso, altura, dadosValidos);
-
 	var imc = peso / (altura * altura);
 	var imcArredondado = imc.toFixed(2);
 
-	if (dadosValidos == true) {
+	if (nomeValido == true && idadeValida == true 
+		&& pesoValido == true && alturaValida == true) {
 		resposta.innerHTML = "Olá " + nome + ", seu IMC é " + imcArredondado + " kg. Pode olhar no gráfico abaixo as classficicações dos IMC's.";
 		desenhaGrafico(imc);
-	}
-}
-
-function validaDados(nome, idade, peso, altura, dadosValidos) {
-	var erroNome = document.getElementById("erro-nome");
-	var erroIdade = document.getElementById("erro-idade");
-
-	if (nome.length == 0) {
-		erroNome.innerHTML = "Campo vázio!";
-	} 
- 
-	if (idade <= 0 || idade >= 100) {
-		erroIdade.innerHTML = "Idade inválida!";
 	}
 }
 
