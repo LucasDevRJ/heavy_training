@@ -1,5 +1,5 @@
 .imc {
-	height: 700px;
+	height: 1200px;
 	display: flex;
 	align-items: center;
 }
@@ -23,6 +23,8 @@
 .imc-imagem {
 	height: 400px;
 	width: 40%;
+	position: relative;
+	bottom: 230px;
 }
 
 #botao {
@@ -40,11 +42,15 @@
 	line-height: 40px;
 }
 
-.tabela, .tabela-cabecalho, .coluna, .linha {
+.tabela, .coluna, .coluna-cabecalho, .linha-cabecalho, .linha {
 	border-width: 1px;
 	border-style: solid;
 	border-color: #000000;
 	padding: 8px;
 	width: 50%;
 	text-align: center;
+}
+
+.linha-cabecalho {
+	background-color: #FFFF00;
 }
