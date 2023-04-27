@@ -65,49 +65,35 @@ function calculaImc() {
 function desenhaGrafico(imc) {
 	var grafico = document.getElementById("grafico");
 	var pincel = grafico.getContext("2d");
+	var x;
+	var y = 0;
 
-	pincel.fillStyle = "black";
-	pincel.font = "12px Arial";
-	pincel.fillText("Menor que 18,5", 5, 50);
-	pincel.fillStyle = "red";
-	pincel.fillRect(0, 0, 100, 30);
-	pincel.strokeStyle = "black";
-	pincel.strokeRect(0, 0, 100, 30);
+	for (var i = 0; i <= 500; i = i + 100) {
+		x = i;
+		
+		pincel.fillStyle = "black";
+		pincel.font = "12px Arial";
+		pincel.fillStyle = "red";
 
-	pincel.fillStyle = "black";
-	pincel.fillText("18,5 a 24,9", 120, 50);
-	pincel.fillStyle = "green";
-	pincel.fillRect(100, 0, 100, 30);
-	pincel.strokeStyle = "black";
-	pincel.strokeRect(100, 0, 100, 30);
-
-	pincel.fillStyle = "black";
-	pincel.fillText("25 a 29,9", 220, 50);
-	pincel.fillStyle = "red";
-	pincel.fillRect(200, 0, 100, 30);
-	pincel.strokeStyle = "black";
-	pincel.strokeRect(200, 0, 100, 30);
-
-	pincel.fillStyle = "black";
-	pincel.fillText("30 a 34,9", 320, 50);
-	pincel.fillStyle = "red";
-	pincel.fillRect(300, 0, 100, 30);
-	pincel.strokeStyle = "black";
-	pincel.strokeRect(300, 0, 100, 30);
-
-	pincel.fillStyle = "black";
-	pincel.fillText("35 a 39,9", 420, 50);
-	pincel.fillStyle = "red";
-	pincel.fillRect(400, 0, 100, 30);
-	pincel.strokeStyle = "black";
-	pincel.strokeRect(400, 0, 100, 30);
-
-	pincel.fillStyle = "black";
-	pincel.fillText("Maior que 40", 520, 50);
-	pincel.fillStyle = "red";
-	pincel.fillRect(500, 0, 100, 30);
-	pincel.strokeStyle = "black";
-	pincel.strokeRect(500, 0, 100, 30);
+		if (x == 0) {
+			pincel.fillText("Menor que 18,5", 5, 50);
+		} else if (x == 100) {
+			pincel.fillText("18,5 a 24,9", 120, 50);
+			pincel.fillStyle = "green";
+		} else if (x == 200) {
+			pincel.fillText("25 a 29,9", 220, 50);
+		} else if (x == 300) {
+			pincel.fillText("30 a 34,9", 320, 50);
+		} else if (x == 400) {
+			pincel.fillText("35 a 39,9", 420, 50);
+		} else {
+			pincel.fillText("Maior que 40", 520, 50);
+		}
+		
+		pincel.fillRect(x, y, 100, 30);
+		pincel.strokeStyle = "black";
+		pincel.strokeRect(x, y, 100, 30);
+	}
 }
 
 var botao = document.getElementById("botao");

@@ -28,7 +28,11 @@
 #botao {
 	width: 35%;
 	padding: 10px 0;
-	margin-top: 30px;
+	margin: 30px 0;
+}
+
+#resposta {
+	margin-bottom: 10px;
 }
 
 .mensagem-erro {
