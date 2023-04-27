@@ -57,6 +57,13 @@ function calculaImc() {
 
 	if (nomeValido == true && idadeValida == true 
 		&& pesoValido == true && alturaValida == true) {
+		var pessoa = {
+			nome : nome,
+			idade : idade,
+			peso : peso,
+			altura : altura
+		};
+		console.log(pessoa);
 		resposta.innerHTML = "Olá " + nome + ", seu IMC é " + imcArredondado + " kg. Pode olhar no gráfico abaixo as classficicações dos IMC's.";
 		desenhaGrafico(imc);
 		calculaFrequenciaCardiacaRecomendada(idade);
@@ -103,7 +110,7 @@ function calculaFrequenciaCardiacaRecomendada(idade) {
 	var frequenciaMaxima = 220;
 	var frequencia = frequenciaMaxima - idade;
 
-	resposta.innerHTML = "A sua frequência cardíaca adequada é " + frequencia + " bpm.";
+	resposta.innerHTML = "E a sua frequência cardíaca adequada é " + frequencia + " bpm.";
 }
 
 var botao = document.getElementById("botao");
