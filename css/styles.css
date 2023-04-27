@@ -39,3 +39,12 @@
 	color: #FF0000;
 	line-height: 40px;
 }
+
+.tabela, .tabela-cabecalho, .coluna, .linha {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	padding: 8px;
+	width: 50%;
+	text-align: center;
+}

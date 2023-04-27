@@ -70,7 +70,7 @@ function desenhaGrafico(imc) {
 
 	for (var i = 0; i <= 500; i = i + 100) {
 		x = i;
-		
+
 		pincel.fillStyle = "black";
 		pincel.font = "12px Arial";
 		pincel.fillStyle = "red";
