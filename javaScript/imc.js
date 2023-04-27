@@ -86,6 +86,7 @@ function desenhaGrafico(imc) {
 		if (x == 0) {
 			pincel.fillText("Menor que 18,5", 5, 50);
 		} else if (x == 100) {
+			pincel.fillStyle = "black";
 			pincel.fillText("18,5 a 24,9", 120, 50);
 			pincel.fillStyle = "green";
 		} else if (x == 200) {
