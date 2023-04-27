@@ -3,7 +3,7 @@ function calculaImc() {
 	var campoIdade = document.getElementById("idade");
 	var campoPeso = document.getElementById("peso");
 	var campoAltura = document.getElementById("altura");
-	var resposta = document.getElementById("resposta");
+	var resposta = document.getElementById("resposta-imc");
 
 	var nome = campoNome.value;
 	var idade = campoIdade.value;
@@ -59,6 +59,7 @@ function calculaImc() {
 		&& pesoValido == true && alturaValida == true) {
 		resposta.innerHTML = "Olá " + nome + ", seu IMC é " + imcArredondado + " kg. Pode olhar no gráfico abaixo as classficicações dos IMC's.";
 		desenhaGrafico(imc);
+		calculaFrequenciaCardiacaRecomendada(idade);
 	}
 }
 
@@ -94,6 +95,15 @@ function desenhaGrafico(imc) {
 		pincel.strokeStyle = "black";
 		pincel.strokeRect(x, y, 100, 30);
 	}
+}
+
+function calculaFrequenciaCardiacaRecomendada(idade) {
+	var resposta = document.getElementById("resposta-frequencia-cardiaca");
+
+	var frequenciaMaxima = 220;
+	var frequencia = frequenciaMaxima - idade;
+
+	resposta.innerHTML = "A sua frequência cardíaca adequada é " + frequencia + " bpm.";
 }
 
 var botao = document.getElementById("botao");
