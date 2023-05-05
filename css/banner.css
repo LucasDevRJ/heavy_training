@@ -30,13 +30,3 @@
 .subtitulo:after {
 	content: '"';
 }
-
-@media screen and (min-width: 200px) and (max-width: 500px) {
-	.banner-titulo {
-		font-size: 20px;
-	}
-}
-
-@media screen and (min-width: 501px) and (max-width: 1240px) {
-	
-}
