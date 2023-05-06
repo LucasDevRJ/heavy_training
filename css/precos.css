@@ -1,4 +1,5 @@
 .precos {
+	background-color: #DCDCDC;
 	height: 700px;
 	display: flex;
 	justify-content: center;
@@ -22,15 +23,21 @@
 .plano-titulo {
 	font-size: 30px;
 	font-weight: bold;
+	color: #696969;
 }
 
 .plano-preco {
 	font-size: 24px;
 	line-height: 70px;
+	color: #32CD32;
 }
 
-.plano-beneficio-incluso {
+.plano-beneficio-incluso, .plano-beneficio-nao-incluso {
 	font-size: 18px;
+}
+
+.plano-beneficio-nao-incluso:before {
+	content: "✖ ";
 }
 
 .plano-beneficio-incluso:before {
