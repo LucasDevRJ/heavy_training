@@ -29,6 +29,10 @@
 	cursor: pointer;
 }
 
+.servicos-item:active {
+	border-color: #808080;
+}
+
 .servicos-texto {
 	text-align: center;
 	margin-bottom: 20px;

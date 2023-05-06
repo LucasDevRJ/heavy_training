@@ -25,6 +25,12 @@
 	width: 40%;
 	position: relative;
 	bottom: 230px;
+	filter: grayscale(100%);
+	transition: 0.5s;
+}
+
+.imc-imagem:hover {
+	filter: initial;
 }
 
 #botao {
