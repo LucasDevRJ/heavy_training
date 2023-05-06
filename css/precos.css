@@ -29,10 +29,10 @@
 	line-height: 70px;
 }
 
-.plano-beneficio {
+.plano-beneficio-incluso {
 	font-size: 18px;
 }
 
-.plano-beneficio:before {
+.plano-beneficio-incluso:before {
 	content: "✔ ";
 }
