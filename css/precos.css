@@ -1,3 +1,17 @@
 .precos {
 	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.precos-lista {
+	display: flex;
+	gap: 30px;
+}
+
+.precos-item {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFF00;
 }
